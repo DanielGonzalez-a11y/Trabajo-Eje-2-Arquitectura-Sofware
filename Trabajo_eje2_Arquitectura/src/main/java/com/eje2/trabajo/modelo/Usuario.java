@@ -3,7 +3,6 @@ package com.eje2.trabajo.modelo;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
-
 import com.eje2.trabajo.modelo.UserLogro;
 
 @Entity
