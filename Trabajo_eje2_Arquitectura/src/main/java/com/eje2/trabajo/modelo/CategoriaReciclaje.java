@@ -6,22 +6,22 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "categorias_reciclaje")
 public class CategoriaReciclaje {
-	
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_categoria;
 
-    private String nombre_categoria;
-    private String descripcion;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id_categoria;
 
-    @Column(columnDefinition = "TIMESTAMP")
-    private LocalDateTime created_at;
-    
-	public Integer getId_categoria() {
+	private String nombre_categoria;
+	private String descripcion;
+
+	@Column(name = "created_at")
+	private LocalDateTime createdAt;
+
+	public Long getId_categoria() {
 		return id_categoria;
 	}
 
-	public void setId_categoria(Integer id_categoria) {
+	public void setId_categoria(Long id_categoria) {
 		this.id_categoria = id_categoria;
 	}
 
@@ -41,13 +41,13 @@ public class CategoriaReciclaje {
 		this.descripcion = descripcion;
 	}
 
-	public LocalDateTime getCreated_at() {
-		return created_at;
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
 	}
 
-	public void setCreated_at(LocalDateTime created_at) {
-		this.created_at = created_at;
+	public void setCreatedAt(LocalDateTime createdAt) {
+		this.createdAt = createdAt;
 	}
 
-    
+	
 }
