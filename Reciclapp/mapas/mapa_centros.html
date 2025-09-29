@@ -1,0 +1,2229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c6886f625dfc1a2a378d7985244fb6e4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+                 <h3 align="center" style="font-size:20px"><b>🗺️ Centros de Reciclaje - Bogotá</b></h3>
+                 <p align="center">♻️ Puntos verdes para reciclar correctamente</p>
+                 
+    
+            <div class="folium-map" id="map_c6886f625dfc1a2a378d7985244fb6e4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c6886f625dfc1a2a378d7985244fb6e4 = L.map(
+                "map_c6886f625dfc1a2a378d7985244fb6e4",
+                {
+                    center: [4.6097, -74.0817],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bab481d84741a9ca7d44aacbbca42ea2 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bab481d84741a9ca7d44aacbbca42ea2.addTo(map_c6886f625dfc1a2a378d7985244fb6e4);
+        
+    
+            var marker_cluster_59ac698e586a9105caa36bc911db7c65 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_65dcd506bfc22d07a2d06a99fb2ee405 = L.marker(
+                [4.585, -74.095],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_a9545431b2162babf5658c95fb93deb5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea86f9f467a6eb589ab5f7110577d305 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_a1a6e4653ef8914045c794afeed85ebd = $(`<div id="html_a1a6e4653ef8914045c794afeed85ebd" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro Ambiental Antonio Nariño</h3>                     <p><b>📍 Dirección:</b> Calle 22 Sur # 8-34</p>                     <p><b>📞 Teléfono:</b> 601 4771234</p>                     <p><b>🕒 Horario:</b> Martes a Domingo: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_ea86f9f467a6eb589ab5f7110577d305.setContent(html_a1a6e4653ef8914045c794afeed85ebd);
+            
+        
+
+        marker_65dcd506bfc22d07a2d06a99fb2ee405.bindPopup(popup_ea86f9f467a6eb589ab5f7110577d305)
+        ;
+
+        
+    
+    
+            marker_65dcd506bfc22d07a2d06a99fb2ee405.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro Ambiental Antonio Nariño
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_65dcd506bfc22d07a2d06a99fb2ee405.setIcon(icon_a9545431b2162babf5658c95fb93deb5);
+            
+    
+            var marker_1c3a15d5a693c55e6539216e9f78acfd = L.marker(
+                [4.668, -74.078],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_d043f97faf3576b5fc24ea582e84905f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_211d2598e57c2556370e3cbae0960df0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d19151aa02471a31b1045fbf538a78ab = $(`<div id="html_d19151aa02471a31b1045fbf538a78ab" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro Ambiental Barrios Unidos</h3>                     <p><b>📍 Dirección:</b> Calle 63 # 22-45</p>                     <p><b>📞 Teléfono:</b> 601 2361234</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (7):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 2 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_211d2598e57c2556370e3cbae0960df0.setContent(html_d19151aa02471a31b1045fbf538a78ab);
+            
+        
+
+        marker_1c3a15d5a693c55e6539216e9f78acfd.bindPopup(popup_211d2598e57c2556370e3cbae0960df0)
+        ;
+
+        
+    
+    
+            marker_1c3a15d5a693c55e6539216e9f78acfd.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro Ambiental Barrios Unidos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1c3a15d5a693c55e6539216e9f78acfd.setIcon(icon_d043f97faf3576b5fc24ea582e84905f);
+            
+    
+            var marker_c306898b983c71b65e8ba9290b57f7ec = L.marker(
+                [4.682, -74.142],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_10a4ced77836c1757936b3be621a5ff0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d6edf0e934ead575bb84243dd545b769 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6527e0c1e37747b3467ca405916ad158 = $(`<div id="html_6527e0c1e37747b3467ca405916ad158" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro Ambiental Fontibón</h3>                     <p><b>📍 Dirección:</b> Calle 17 # 98-45</p>                     <p><b>📞 Teléfono:</b> 601 4131234</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (7):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 2 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_d6edf0e934ead575bb84243dd545b769.setContent(html_6527e0c1e37747b3467ca405916ad158);
+            
+        
+
+        marker_c306898b983c71b65e8ba9290b57f7ec.bindPopup(popup_d6edf0e934ead575bb84243dd545b769)
+        ;
+
+        
+    
+    
+            marker_c306898b983c71b65e8ba9290b57f7ec.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro Ambiental Fontibón
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c306898b983c71b65e8ba9290b57f7ec.setIcon(icon_10a4ced77836c1757936b3be621a5ff0);
+            
+    
+            var marker_76e2f268ef1c71e81e7690237d3f4e21 = L.marker(
+                [4.575, -74.105],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_e437a2a24e231c101fc48967cc2eff23 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_98f33426aa82b6933cf3684e04133077 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_e3c0fb9b295147160f8718899b73d8e5 = $(`<div id="html_e3c0fb9b295147160f8718899b73d8e5" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro Ambiental Rafael Uribe</h3>                     <p><b>📍 Dirección:</b> Calle 27 Sur # 15-34</p>                     <p><b>📞 Teléfono:</b> 601 7681234</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_98f33426aa82b6933cf3684e04133077.setContent(html_e3c0fb9b295147160f8718899b73d8e5);
+            
+        
+
+        marker_76e2f268ef1c71e81e7690237d3f4e21.bindPopup(popup_98f33426aa82b6933cf3684e04133077)
+        ;
+
+        
+    
+    
+            marker_76e2f268ef1c71e81e7690237d3f4e21.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro Ambiental Rafael Uribe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_76e2f268ef1c71e81e7690237d3f4e21.setIcon(icon_e437a2a24e231c101fc48967cc2eff23);
+            
+    
+            var marker_2af82cf64a3d8818033b1b5a3274d592 = L.marker(
+                [4.568, -74.085],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_b7741a544f5cab8d69696bc8a969069f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6706a504300e8571a5778d7e39f28441 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_a652f82a4e7019f7e2a712b1c7d98a74 = $(`<div id="html_a652f82a4e7019f7e2a712b1c7d98a74" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro Ambiental San Cristóbal</h3>                     <p><b>📍 Dirección:</b> Calle 4 Sur # 3-45 Este</p>                     <p><b>📞 Teléfono:</b> 601 2051234</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 8:00 - 16:00</p>                     <p><b>♻️ Materiales aceptados (7):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 2 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_6706a504300e8571a5778d7e39f28441.setContent(html_a652f82a4e7019f7e2a712b1c7d98a74);
+            
+        
+
+        marker_2af82cf64a3d8818033b1b5a3274d592.bindPopup(popup_6706a504300e8571a5778d7e39f28441)
+        ;
+
+        
+    
+    
+            marker_2af82cf64a3d8818033b1b5a3274d592.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro Ambiental San Cristóbal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2af82cf64a3d8818033b1b5a3274d592.setIcon(icon_b7741a544f5cab8d69696bc8a969069f);
+            
+    
+            var marker_2911d388c16d5abc96daddd1d63924d5 = L.marker(
+                [4.568, -74.145],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_7236222b79d8048894ed396550e55a00 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6b74bfd108c504f752c21c58a1625e95 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_0bcaa7c71a0e386bc959fa7e327cfdf1 = $(`<div id="html_0bcaa7c71a0e386bc959fa7e327cfdf1" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro Ambiental Tunjuelito</h3>                     <p><b>📍 Dirección:</b> Calle 48B Sur # 22-34</p>                     <p><b>📞 Teléfono:</b> 601 7691234</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 7:30 - 16:30</p>                     <p><b>♻️ Materiales aceptados (7):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 2 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_6b74bfd108c504f752c21c58a1625e95.setContent(html_0bcaa7c71a0e386bc959fa7e327cfdf1);
+            
+        
+
+        marker_2911d388c16d5abc96daddd1d63924d5.bindPopup(popup_6b74bfd108c504f752c21c58a1625e95)
+        ;
+
+        
+    
+    
+            marker_2911d388c16d5abc96daddd1d63924d5.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro Ambiental Tunjuelito
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2911d388c16d5abc96daddd1d63924d5.setIcon(icon_7236222b79d8048894ed396550e55a00);
+            
+    
+            var marker_b7d1968d4ff1d634d51b7acaac0128e7 = L.marker(
+                [4.615, -74.195],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_511d290db7ca19e1093f0319defade2c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6556e7f6d95e067c4dff31fdc4ca8848 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_aa2316db37f5bb42881c823907f6fa58 = $(`<div id="html_aa2316db37f5bb42881c823907f6fa58" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro de Acopio Bosa</h3>                     <p><b>📍 Dirección:</b> Calle 65 Sur # 80-23</p>                     <p><b>📞 Teléfono:</b> 601 4391234</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 7:00 - 19:00</p>                     <p><b>♻️ Materiales aceptados (7):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 2 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_6556e7f6d95e067c4dff31fdc4ca8848.setContent(html_aa2316db37f5bb42881c823907f6fa58);
+            
+        
+
+        marker_b7d1968d4ff1d634d51b7acaac0128e7.bindPopup(popup_6556e7f6d95e067c4dff31fdc4ca8848)
+        ;
+
+        
+    
+    
+            marker_b7d1968d4ff1d634d51b7acaac0128e7.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro de Acopio Bosa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b7d1968d4ff1d634d51b7acaac0128e7.setIcon(icon_511d290db7ca19e1093f0319defade2c);
+            
+    
+            var marker_0ffa27995c96774307cceeb3b15482b8 = L.marker(
+                [4.61, -74.072],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_b418e2fb17f0da721306c1b9f1b0ec54 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2010161ce1be7251bb00778556c203cc = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_1499dfc9a87cd92deb8739c9bd1c699e = $(`<div id="html_1499dfc9a87cd92deb8739c9bd1c699e" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro de Acopio Centro</h3>                     <p><b>📍 Dirección:</b> Calle 19 # 5-35</p>                     <p><b>📞 Teléfono:</b> 601 2821234</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (10):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 5 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_2010161ce1be7251bb00778556c203cc.setContent(html_1499dfc9a87cd92deb8739c9bd1c699e);
+            
+        
+
+        marker_0ffa27995c96774307cceeb3b15482b8.bindPopup(popup_2010161ce1be7251bb00778556c203cc)
+        ;
+
+        
+    
+    
+            marker_0ffa27995c96774307cceeb3b15482b8.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro de Acopio Centro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0ffa27995c96774307cceeb3b15482b8.setIcon(icon_b418e2fb17f0da721306c1b9f1b0ec54);
+            
+    
+            var marker_f7d006da68e8f88a3a1df3c22cba4895 = L.marker(
+                [4.55, -74.155],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_764526d90920e4e65b44e39775ff78c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3850b47bc3605f12dc65064c28ce212d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_282006a9dc5417bcb49ec48636052660 = $(`<div id="html_282006a9dc5417bcb49ec48636052660" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro de Acopio Ciudad Bolívar</h3>                     <p><b>📍 Dirección:</b> Calle 62 Sur # 80-23</p>                     <p><b>📞 Teléfono:</b> 601 7301234</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 7:00 - 18:00</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_3850b47bc3605f12dc65064c28ce212d.setContent(html_282006a9dc5417bcb49ec48636052660);
+            
+        
+
+        marker_f7d006da68e8f88a3a1df3c22cba4895.bindPopup(popup_3850b47bc3605f12dc65064c28ce212d)
+        ;
+
+        
+    
+    
+            marker_f7d006da68e8f88a3a1df3c22cba4895.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro de Acopio Ciudad Bolívar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f7d006da68e8f88a3a1df3c22cba4895.setIcon(icon_764526d90920e4e65b44e39775ff78c0);
+            
+    
+            var marker_75e29c3b4bd838f12d274efd4f7ec280 = L.marker(
+                [4.698, -74.085],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_d99347d31d5b81a622511ccf3628bac6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_414c7a9f6eccb3adcf8a25b59cf71b20 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_66df9f6e88ccdfc864f8c98acbd12cf6 = $(`<div id="html_66df9f6e88ccdfc864f8c98acbd12cf6" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro de Acopio Engativá</h3>                     <p><b>📍 Dirección:</b> Calle 80 # 105-23</p>                     <p><b>📞 Teléfono:</b> 601 5931234</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 7:00 - 19:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_414c7a9f6eccb3adcf8a25b59cf71b20.setContent(html_66df9f6e88ccdfc864f8c98acbd12cf6);
+            
+        
+
+        marker_75e29c3b4bd838f12d274efd4f7ec280.bindPopup(popup_414c7a9f6eccb3adcf8a25b59cf71b20)
+        ;
+
+        
+    
+    
+            marker_75e29c3b4bd838f12d274efd4f7ec280.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro de Acopio Engativá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_75e29c3b4bd838f12d274efd4f7ec280.setIcon(icon_d99347d31d5b81a622511ccf3628bac6);
+            
+    
+            var marker_0062fbd1d26b8d4fe4e2060d76e9ea18 = L.marker(
+                [4.605, -74.085],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_55e0b05d432ec44797c564d2beb20900 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5fc2f207db3f4d1d17c0fbf43791ba36 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_ef6a49db8f5ea73747560eaa06f1abe9 = $(`<div id="html_ef6a49db8f5ea73747560eaa06f1abe9" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro de Acopio Los Mártires</h3>                     <p><b>📍 Dirección:</b> Calle 17 # 12-45</p>                     <p><b>📞 Teléfono:</b> 601 3411234</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 7:00 - 18:00</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_5fc2f207db3f4d1d17c0fbf43791ba36.setContent(html_ef6a49db8f5ea73747560eaa06f1abe9);
+            
+        
+
+        marker_0062fbd1d26b8d4fe4e2060d76e9ea18.bindPopup(popup_5fc2f207db3f4d1d17c0fbf43791ba36)
+        ;
+
+        
+    
+    
+            marker_0062fbd1d26b8d4fe4e2060d76e9ea18.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro de Acopio Los Mártires
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0062fbd1d26b8d4fe4e2060d76e9ea18.setIcon(icon_55e0b05d432ec44797c564d2beb20900);
+            
+    
+            var marker_9daedd0798ef09b9ebbfb6f57c6eda04 = L.marker(
+                [4.705, -74.032],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_60ac025a95205dde85fea31b906e862d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_58a16801ec34a90f14088fdf511a1de9 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_b300186917fd4e668e45c3fdd38df64f = $(`<div id="html_b300186917fd4e668e45c3fdd38df64f" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro de Acopio Usaquén</h3>                     <p><b>📍 Dirección:</b> Calle 127 # 15-60</p>                     <p><b>📞 Teléfono:</b> 601 7451234</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_58a16801ec34a90f14088fdf511a1de9.setContent(html_b300186917fd4e668e45c3fdd38df64f);
+            
+        
+
+        marker_9daedd0798ef09b9ebbfb6f57c6eda04.bindPopup(popup_58a16801ec34a90f14088fdf511a1de9)
+        ;
+
+        
+    
+    
+            marker_9daedd0798ef09b9ebbfb6f57c6eda04.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro de Acopio Usaquén
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9daedd0798ef09b9ebbfb6f57c6eda04.setIcon(icon_60ac025a95205dde85fea31b906e862d);
+            
+    
+            var marker_3c53a117cc38f828c04b96aa1a0af897 = L.marker(
+                [4.648, -74.062],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_00001fbe5c542a26af73b7a137ab51c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d6d104f5b1ed1ea180407a9b3da13e5 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_37ead8bb0d1d045b0f7f8ba014b9605a = $(`<div id="html_37ead8bb0d1d045b0f7f8ba014b9605a" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro de Reciclaje Chapinero</h3>                     <p><b>📍 Dirección:</b> Calle 63 # 13-24</p>                     <p><b>📞 Teléfono:</b> 601 3201234</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 7:30 - 16:30</p>                     <p><b>♻️ Materiales aceptados (10):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 5 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_2d6d104f5b1ed1ea180407a9b3da13e5.setContent(html_37ead8bb0d1d045b0f7f8ba014b9605a);
+            
+        
+
+        marker_3c53a117cc38f828c04b96aa1a0af897.bindPopup(popup_2d6d104f5b1ed1ea180407a9b3da13e5)
+        ;
+
+        
+    
+    
+            marker_3c53a117cc38f828c04b96aa1a0af897.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro de Reciclaje Chapinero
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3c53a117cc38f828c04b96aa1a0af897.setIcon(icon_00001fbe5c542a26af73b7a137ab51c6);
+            
+    
+            var marker_ccb4d77af29804f5cbcfacf10f38cb6b = L.marker(
+                [4.635, -74.152],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_6768d00251328d556815a653dda8e196 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b02e77b5d03b574604b1c9ab937ded41 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6bdbfdaf0af94028792b6c862fd15ac1 = $(`<div id="html_6bdbfdaf0af94028792b6c862fd15ac1" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro de Reciclaje Kennedy</h3>                     <p><b>📍 Dirección:</b> Carrera 80 # 40-56 Sur</p>                     <p><b>📞 Teléfono:</b> 601 4609012</p>                     <p><b>🕒 Horario:</b> Lunes a Domingo: 6:00 - 20:00</p>                     <p><b>♻️ Materiales aceptados (10):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 5 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_b02e77b5d03b574604b1c9ab937ded41.setContent(html_6bdbfdaf0af94028792b6c862fd15ac1);
+            
+        
+
+        marker_ccb4d77af29804f5cbcfacf10f38cb6b.bindPopup(popup_b02e77b5d03b574604b1c9ab937ded41)
+        ;
+
+        
+    
+    
+            marker_ccb4d77af29804f5cbcfacf10f38cb6b.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro de Reciclaje Kennedy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ccb4d77af29804f5cbcfacf10f38cb6b.setIcon(icon_6768d00251328d556815a653dda8e196);
+            
+    
+            var marker_9557ba88ad7f1f4819c4c29a7cbd66b4 = L.marker(
+                [4.625, -74.105],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_8bc3bc30f54189bdcbf8efe8677a67c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2c569b444360c3bff6e05fe7fa51f4d6 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_685f8f73076248ffc87913c2c1e48abf = $(`<div id="html_685f8f73076248ffc87913c2c1e48abf" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro de Reciclaje Puente Aranda</h3>                     <p><b>📍 Dirección:</b> Calle 13 # 35-67</p>                     <p><b>📞 Teléfono:</b> 601 3791234</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_2c569b444360c3bff6e05fe7fa51f4d6.setContent(html_685f8f73076248ffc87913c2c1e48abf);
+            
+        
+
+        marker_9557ba88ad7f1f4819c4c29a7cbd66b4.bindPopup(popup_2c569b444360c3bff6e05fe7fa51f4d6)
+        ;
+
+        
+    
+    
+            marker_9557ba88ad7f1f4819c4c29a7cbd66b4.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro de Reciclaje Puente Aranda
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9557ba88ad7f1f4819c4c29a7cbd66b4.setIcon(icon_8bc3bc30f54189bdcbf8efe8677a67c6);
+            
+    
+            var marker_aa0c8364f54425db69b2e5c70685d544 = L.marker(
+                [4.745, -74.072],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_ef238eec8e99f7c670e12329f8df0a51 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_369b5aef7e65917b1b13cf2b1cd7da09 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6ce3a486d8ac071eb088e80e6148161d = $(`<div id="html_6ce3a486d8ac071eb088e80e6148161d" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro de Reciclaje Suba</h3>                     <p><b>📍 Dirección:</b> Calle 145 # 105-34</p>                     <p><b>📞 Teléfono:</b> 601 6841234</p>                     <p><b>🕒 Horario:</b> Lunes a Domingo: 6:00 - 22:00</p>                     <p><b>♻️ Materiales aceptados (10):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 5 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_369b5aef7e65917b1b13cf2b1cd7da09.setContent(html_6ce3a486d8ac071eb088e80e6148161d);
+            
+        
+
+        marker_aa0c8364f54425db69b2e5c70685d544.bindPopup(popup_369b5aef7e65917b1b13cf2b1cd7da09)
+        ;
+
+        
+    
+    
+            marker_aa0c8364f54425db69b2e5c70685d544.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro de Reciclaje Suba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aa0c8364f54425db69b2e5c70685d544.setIcon(icon_ef238eec8e99f7c670e12329f8df0a51);
+            
+    
+            var marker_b9e3d5ad65924743721e51753a7826c0 = L.marker(
+                [4.635, -74.072],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_1d5a4c3f16b9f7511303856567abbdbd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d58e74d4b5415a41b814f6c18abbb4b0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_100b8ccf680cd041cd06c1f0899914ea = $(`<div id="html_100b8ccf680cd041cd06c1f0899914ea" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro de Reciclaje Teusaquillo</h3>                     <p><b>📍 Dirección:</b> Calle 39 # 18-34</p>                     <p><b>📞 Teléfono:</b> 601 2111234</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 7:30 - 16:30</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_d58e74d4b5415a41b814f6c18abbb4b0.setContent(html_100b8ccf680cd041cd06c1f0899914ea);
+            
+        
+
+        marker_b9e3d5ad65924743721e51753a7826c0.bindPopup(popup_d58e74d4b5415a41b814f6c18abbb4b0)
+        ;
+
+        
+    
+    
+            marker_b9e3d5ad65924743721e51753a7826c0.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro de Reciclaje Teusaquillo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b9e3d5ad65924743721e51753a7826c0.setIcon(icon_1d5a4c3f16b9f7511303856567abbdbd);
+            
+    
+            var marker_f38cb35ea47740a49f8b3b135a6be7e6 = L.marker(
+                [4.5, -74.11],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_7a79544fe7a5b6045d9ea470a2a83a8d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e454242eea737c6103e5ec97e180722 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_37119515385ea1598c9fd2de9ecb3f50 = $(`<div id="html_37119515385ea1598c9fd2de9ecb3f50" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro de Reciclaje Usme</h3>                     <p><b>📍 Dirección:</b> Carrera 1 # 50-23 Sur</p>                     <p><b>📞 Teléfono:</b> 601 4601234</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 7:00 - 18:00</p>                     <p><b>♻️ Materiales aceptados (7):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 2 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_1e454242eea737c6103e5ec97e180722.setContent(html_37119515385ea1598c9fd2de9ecb3f50);
+            
+        
+
+        marker_f38cb35ea47740a49f8b3b135a6be7e6.bindPopup(popup_1e454242eea737c6103e5ec97e180722)
+        ;
+
+        
+    
+    
+            marker_f38cb35ea47740a49f8b3b135a6be7e6.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro de Reciclaje Usme
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f38cb35ea47740a49f8b3b135a6be7e6.setIcon(icon_7a79544fe7a5b6045d9ea470a2a83a8d);
+            
+    
+            var marker_8ab522da7e5a8311eea8b0bc59e70891 = L.marker(
+                [4.598, -74.072],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_cbdb17674cd64bac3b1e892a0dea923d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c468b0d040d9c5ce90d14273edb1935a = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_157313df4e7f8605d17e58b1040d884e = $(`<div id="html_157313df4e7f8605d17e58b1040d884e" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Centro Histórico de Reciclaje</h3>                     <p><b>📍 Dirección:</b> Calle 11 # 6-45</p>                     <p><b>📞 Teléfono:</b> 601 3421234</p>                     <p><b>🕒 Horario:</b> Miércoles a Domingo: 10:00 - 16:00</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_c468b0d040d9c5ce90d14273edb1935a.setContent(html_157313df4e7f8605d17e58b1040d884e);
+            
+        
+
+        marker_8ab522da7e5a8311eea8b0bc59e70891.bindPopup(popup_c468b0d040d9c5ce90d14273edb1935a)
+        ;
+
+        
+    
+    
+            marker_8ab522da7e5a8311eea8b0bc59e70891.bindTooltip(
+                `<div>
+                     Click para ver detalles de Centro Histórico de Reciclaje
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8ab522da7e5a8311eea8b0bc59e70891.setIcon(icon_cbdb17674cd64bac3b1e892a0dea923d);
+            
+    
+            var marker_bc42243a124a10a92c548b61f4e9c6c8 = L.marker(
+                [4.63, -74.155],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_6421c2b3344274ae5c8b496f754a1ee9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_400c7cd905585514f63716697a3b103b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_90f6de8f12d224ff339dde50c21a5b69 = $(`<div id="html_90f6de8f12d224ff339dde50c21a5b69" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">EcoCentro Kennedy Central</h3>                     <p><b>📍 Dirección:</b> Diagonal 75 # 25-12</p>                     <p><b>📞 Teléfono:</b> 601 4607890</p>                     <p><b>🕒 Horario:</b> Todos los días: 8:00 - 20:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_400c7cd905585514f63716697a3b103b.setContent(html_90f6de8f12d224ff339dde50c21a5b69);
+            
+        
+
+        marker_bc42243a124a10a92c548b61f4e9c6c8.bindPopup(popup_400c7cd905585514f63716697a3b103b)
+        ;
+
+        
+    
+    
+            marker_bc42243a124a10a92c548b61f4e9c6c8.bindTooltip(
+                `<div>
+                     Click para ver detalles de EcoCentro Kennedy Central
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bc42243a124a10a92c548b61f4e9c6c8.setIcon(icon_6421c2b3344274ae5c8b496f754a1ee9);
+            
+    
+            var marker_a1a6fa8920c5ff7d58107cf7105554bd = L.marker(
+                [4.605, -74.075],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_fba0c97271d949adbe7cc0f00c00b926 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f60b79817252b1776496509832f9485f = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_26c71e8387bb76a37d67d97a993615b3 = $(`<div id="html_26c71e8387bb76a37d67d97a993615b3" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">EcoCentro San Victorino</h3>                     <p><b>📍 Dirección:</b> Calle 13 # 12-45</p>                     <p><b>📞 Teléfono:</b> 601 2829012</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 7:00 - 19:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_f60b79817252b1776496509832f9485f.setContent(html_26c71e8387bb76a37d67d97a993615b3);
+            
+        
+
+        marker_a1a6fa8920c5ff7d58107cf7105554bd.bindPopup(popup_f60b79817252b1776496509832f9485f)
+        ;
+
+        
+    
+    
+            marker_a1a6fa8920c5ff7d58107cf7105554bd.bindTooltip(
+                `<div>
+                     Click para ver detalles de EcoCentro San Victorino
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1a6fa8920c5ff7d58107cf7105554bd.setIcon(icon_fba0c97271d949adbe7cc0f00c00b926);
+            
+    
+            var marker_93fe9687b78e3d23a5f0d9e748549554 = L.marker(
+                [4.742, -74.075],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_d039965efc44eba880957cfc4bf4058b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b5e1fd3afccff47dbcd993bb55fd5ea8 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_2f44a5f22c51b6d96dc3f640ff4d5632 = $(`<div id="html_2f44a5f22c51b6d96dc3f640ff4d5632" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">EcoCentro Suba Centro</h3>                     <p><b>📍 Dirección:</b> Calle 139 # 98-23</p>                     <p><b>📞 Teléfono:</b> 601 6849012</p>                     <p><b>🕒 Horario:</b> Martes a Domingo: 8:00 - 18:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_b5e1fd3afccff47dbcd993bb55fd5ea8.setContent(html_2f44a5f22c51b6d96dc3f640ff4d5632);
+            
+        
+
+        marker_93fe9687b78e3d23a5f0d9e748549554.bindPopup(popup_b5e1fd3afccff47dbcd993bb55fd5ea8)
+        ;
+
+        
+    
+    
+            marker_93fe9687b78e3d23a5f0d9e748549554.bindTooltip(
+                `<div>
+                     Click para ver detalles de EcoCentro Suba Centro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_93fe9687b78e3d23a5f0d9e748549554.setIcon(icon_d039965efc44eba880957cfc4bf4058b);
+            
+    
+            var marker_bf315f65e2cf15cef4709d214d3d8001 = L.marker(
+                [4.695, -74.082],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_44545fb1167b3e7391d880f278fc81f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3c0eeb7570268d65d9851ebf9229f609 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_4ffe796b17a92c926e59e4c85c052de4 = $(`<div id="html_4ffe796b17a92c926e59e4c85c052de4" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">EcoPoint Álamos</h3>                     <p><b>📍 Dirección:</b> Carrera 72 # 82-12</p>                     <p><b>📞 Teléfono:</b> 601 5939012</p>                     <p><b>🕒 Horario:</b> Todos los días: 8:00 - 20:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_3c0eeb7570268d65d9851ebf9229f609.setContent(html_4ffe796b17a92c926e59e4c85c052de4);
+            
+        
+
+        marker_bf315f65e2cf15cef4709d214d3d8001.bindPopup(popup_3c0eeb7570268d65d9851ebf9229f609)
+        ;
+
+        
+    
+    
+            marker_bf315f65e2cf15cef4709d214d3d8001.bindTooltip(
+                `<div>
+                     Click para ver detalles de EcoPoint Álamos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bf315f65e2cf15cef4709d214d3d8001.setIcon(icon_44545fb1167b3e7391d880f278fc81f0);
+            
+    
+            var marker_133407e03a07d2adedba161cfe44a773 = L.marker(
+                [4.618, -74.192],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_7bddba69c60aa23b630733b65c5c8f01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aeca1d4ff1e7f5636f51aa62d931f020 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_3dd8159794154056d92af54fe98df22b = $(`<div id="html_3dd8159794154056d92af54fe98df22b" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">EcoPoint Bosa Centro</h3>                     <p><b>📍 Dirección:</b> Transversal 86 # 60-45 Sur</p>                     <p><b>📞 Teléfono:</b> 601 4395678</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_aeca1d4ff1e7f5636f51aa62d931f020.setContent(html_3dd8159794154056d92af54fe98df22b);
+            
+        
+
+        marker_133407e03a07d2adedba161cfe44a773.bindPopup(popup_aeca1d4ff1e7f5636f51aa62d931f020)
+        ;
+
+        
+    
+    
+            marker_133407e03a07d2adedba161cfe44a773.bindTooltip(
+                `<div>
+                     Click para ver detalles de EcoPoint Bosa Centro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_133407e03a07d2adedba161cfe44a773.setIcon(icon_7bddba69c60aa23b630733b65c5c8f01);
+            
+    
+            var marker_439a81ad823942047e5e88e86e390578 = L.marker(
+                [4.495, -74.115],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_b5cbaa0d5dbd543d5715a84bfb273dd3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_38599adec3ad19ecef71da173e803706 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_f07df87806e12e1a73ab979ad1405f6e = $(`<div id="html_f07df87806e12e1a73ab979ad1405f6e" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">EcoPoint Ciudad Usme</h3>                     <p><b>📍 Dirección:</b> Calle 65 Sur # 2-45</p>                     <p><b>📞 Teléfono:</b> 601 4605678</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_38599adec3ad19ecef71da173e803706.setContent(html_f07df87806e12e1a73ab979ad1405f6e);
+            
+        
+
+        marker_439a81ad823942047e5e88e86e390578.bindPopup(popup_38599adec3ad19ecef71da173e803706)
+        ;
+
+        
+    
+    
+            marker_439a81ad823942047e5e88e86e390578.bindTooltip(
+                `<div>
+                     Click para ver detalles de EcoPoint Ciudad Usme
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_439a81ad823942047e5e88e86e390578.setIcon(icon_b5cbaa0d5dbd543d5715a84bfb273dd3);
+            
+    
+            var marker_69d5ac38a9d767fc821d1cd4b01bd50f = L.marker(
+                [4.601, -74.07],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_a9261d7ce5603c544024d5999a688dde = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9e3a8da0f54ed0126a728a79a9e22a99 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_48c973df27e598b5d848b0014c3f496c = $(`<div id="html_48c973df27e598b5d848b0014c3f496c" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">EcoPoint Museo del Oro</h3>                     <p><b>📍 Dirección:</b> Carrera 6 # 15-88</p>                     <p><b>📞 Teléfono:</b> 601 3425678</p>                     <p><b>🕒 Horario:</b> Martes a Domingo: 9:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_9e3a8da0f54ed0126a728a79a9e22a99.setContent(html_48c973df27e598b5d848b0014c3f496c);
+            
+        
+
+        marker_69d5ac38a9d767fc821d1cd4b01bd50f.bindPopup(popup_9e3a8da0f54ed0126a728a79a9e22a99)
+        ;
+
+        
+    
+    
+            marker_69d5ac38a9d767fc821d1cd4b01bd50f.bindTooltip(
+                `<div>
+                     Click para ver detalles de EcoPoint Museo del Oro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_69d5ac38a9d767fc821d1cd4b01bd50f.setIcon(icon_a9261d7ce5603c544024d5999a688dde);
+            
+    
+            var marker_10f549af331f83c15cb51cd9f86c0f9c = L.marker(
+                [4.555, -74.152],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_7a7e08f1d62bf4ca4e6db15b33371091 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_802ef131ab37e4a2348b2f90baf48a32 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_e8d5f4c3604bb274d97f9a53d111d3ef = $(`<div id="html_e8d5f4c3604bb274d97f9a53d111d3ef" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">EcoPoint Paraíso</h3>                     <p><b>📍 Dirección:</b> Transversal 86 # 62-45 Sur</p>                     <p><b>📞 Teléfono:</b> 601 7305678</p>                     <p><b>🕒 Horario:</b> Martes a Domingo: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_802ef131ab37e4a2348b2f90baf48a32.setContent(html_e8d5f4c3604bb274d97f9a53d111d3ef);
+            
+        
+
+        marker_10f549af331f83c15cb51cd9f86c0f9c.bindPopup(popup_802ef131ab37e4a2348b2f90baf48a32)
+        ;
+
+        
+    
+    
+            marker_10f549af331f83c15cb51cd9f86c0f9c.bindTooltip(
+                `<div>
+                     Click para ver detalles de EcoPoint Paraíso
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_10f549af331f83c15cb51cd9f86c0f9c.setIcon(icon_7a7e08f1d62bf4ca4e6db15b33371091);
+            
+    
+            var marker_2b94d7913f211bda1a4c46758b9f946b = L.marker(
+                [4.608, -74.082],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_418fcd4ad4f0d77eaaa4e32f1c718c0f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2f16ddf0523bc6b9a878d49000cf8fc = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d039c80a11a88736c49d17c41820eea8 = $(`<div id="html_d039c80a11a88736c49d17c41820eea8" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">EcoPoint Sanandresito</h3>                     <p><b>📍 Dirección:</b> Carrera 24 # 15-67</p>                     <p><b>📞 Teléfono:</b> 601 3415678</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_d2f16ddf0523bc6b9a878d49000cf8fc.setContent(html_d039c80a11a88736c49d17c41820eea8);
+            
+        
+
+        marker_2b94d7913f211bda1a4c46758b9f946b.bindPopup(popup_d2f16ddf0523bc6b9a878d49000cf8fc)
+        ;
+
+        
+    
+    
+            marker_2b94d7913f211bda1a4c46758b9f946b.bindTooltip(
+                `<div>
+                     Click para ver detalles de EcoPoint Sanandresito
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2b94d7913f211bda1a4c46758b9f946b.setIcon(icon_418fcd4ad4f0d77eaaa4e32f1c718c0f);
+            
+    
+            var marker_f4df5c798544ddff58a75eae0d594c1d = L.marker(
+                [4.7065, -74.0412],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_8a87e7f6148baef21bdfdcdee337ad95 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c69c57ef2fbb83c36a03b83da40e84b6 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d20c7f7395fadfad2d37211477fbcb47 = $(`<div id="html_d20c7f7395fadfad2d37211477fbcb47" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">EcoPoint Unicentro</h3>                     <p><b>📍 Dirección:</b> Av. Carrera 15 # 124-30</p>                     <p><b>📞 Teléfono:</b> 601 7459012</p>                     <p><b>🕒 Horario:</b> Todos los días: 10:00 - 22:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_c69c57ef2fbb83c36a03b83da40e84b6.setContent(html_d20c7f7395fadfad2d37211477fbcb47);
+            
+        
+
+        marker_f4df5c798544ddff58a75eae0d594c1d.bindPopup(popup_c69c57ef2fbb83c36a03b83da40e84b6)
+        ;
+
+        
+    
+    
+            marker_f4df5c798544ddff58a75eae0d594c1d.bindTooltip(
+                `<div>
+                     Click para ver detalles de EcoPoint Unicentro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f4df5c798544ddff58a75eae0d594c1d.setIcon(icon_8a87e7f6148baef21bdfdcdee337ad95);
+            
+    
+            var marker_f20a047d967df5e98ab454ff9de98064 = L.marker(
+                [4.652, -74.06],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_8e27f4eea399e05aa172cc8f24e9deb1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b90dceb3ca736fdf6c20c191c44f4e34 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_b1218ff369b6d8a0bac4ace6e7934688 = $(`<div id="html_b1218ff369b6d8a0bac4ace6e7934688" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Estación Ecológica Lourdes</h3>                     <p><b>📍 Dirección:</b> Carrera 13 # 63-45</p>                     <p><b>📞 Teléfono:</b> 601 3209012</p>                     <p><b>🕒 Horario:</b> Martes a Domingo: 9:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_b90dceb3ca736fdf6c20c191c44f4e34.setContent(html_b1218ff369b6d8a0bac4ace6e7934688);
+            
+        
+
+        marker_f20a047d967df5e98ab454ff9de98064.bindPopup(popup_b90dceb3ca736fdf6c20c191c44f4e34)
+        ;
+
+        
+    
+    
+            marker_f20a047d967df5e98ab454ff9de98064.bindTooltip(
+                `<div>
+                     Click para ver detalles de Estación Ecológica Lourdes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f20a047d967df5e98ab454ff9de98064.setIcon(icon_8e27f4eea399e05aa172cc8f24e9deb1);
+            
+    
+            var marker_16ed60cd402773b9c7ed39b9db6c25e2 = L.marker(
+                [4.718, -74.038],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_e0fef651093810d44895180b18f22453 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6290f27815ed177e9c413c2446ced65c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_e11d6b56df2c03469ca7b87780eb7576 = $(`<div id="html_e11d6b56df2c03469ca7b87780eb7576" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Limpio Cedritos</h3>                     <p><b>📍 Dirección:</b> Carrera 19 # 141-25</p>                     <p><b>📞 Teléfono:</b> 601 7455678</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 7:00 - 19:00</p>                     <p><b>♻️ Materiales aceptados (7):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 2 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_6290f27815ed177e9c413c2446ced65c.setContent(html_e11d6b56df2c03469ca7b87780eb7576);
+            
+        
+
+        marker_16ed60cd402773b9c7ed39b9db6c25e2.bindPopup(popup_6290f27815ed177e9c413c2446ced65c)
+        ;
+
+        
+    
+    
+            marker_16ed60cd402773b9c7ed39b9db6c25e2.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Limpio Cedritos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_16ed60cd402773b9c7ed39b9db6c25e2.setIcon(icon_e0fef651093810d44895180b18f22453);
+            
+    
+            var marker_58c6268862fd0884ff9b4f4fa45ff4d9 = L.marker(
+                [4.578, -74.108],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_1c42238ca44192957f031357ed1356d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_033bb280f9b64fb3777967d80ea53acf = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d946b9f464c6f30d99fa31bc305d7e2c = $(`<div id="html_d946b9f464c6f30d99fa31bc305d7e2c" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Limpio Diana Turbay</h3>                     <p><b>📍 Dirección:</b> Diagonal 44 # 18-45 Sur</p>                     <p><b>📞 Teléfono:</b> 601 7685678</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 7:00 - 19:00</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_033bb280f9b64fb3777967d80ea53acf.setContent(html_d946b9f464c6f30d99fa31bc305d7e2c);
+            
+        
+
+        marker_58c6268862fd0884ff9b4f4fa45ff4d9.bindPopup(popup_033bb280f9b64fb3777967d80ea53acf)
+        ;
+
+        
+    
+    
+            marker_58c6268862fd0884ff9b4f4fa45ff4d9.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Limpio Diana Turbay
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_58c6268862fd0884ff9b4f4fa45ff4d9.setIcon(icon_1c42238ca44192957f031357ed1356d7);
+            
+    
+            var marker_0ef92c4c9689847cb392945095be3271 = L.marker(
+                [4.692, -74.088],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_e46e94b79055070c26e0a7ceec5875d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7e8f3df97a32657f46754a1c0554b4e9 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5a713912c39da16b072cad5f02859841 = $(`<div id="html_5a713912c39da16b072cad5f02859841" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Limpio Engativá Centro</h3>                     <p><b>📍 Dirección:</b> Av. Boyacá # 70-45</p>                     <p><b>📞 Teléfono:</b> 601 5935678</p>                     <p><b>🕒 Horario:</b> Lunes a Viernes: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (7):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 2 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_7e8f3df97a32657f46754a1c0554b4e9.setContent(html_5a713912c39da16b072cad5f02859841);
+            
+        
+
+        marker_0ef92c4c9689847cb392945095be3271.bindPopup(popup_7e8f3df97a32657f46754a1c0554b4e9)
+        ;
+
+        
+    
+    
+            marker_0ef92c4c9689847cb392945095be3271.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Limpio Engativá Centro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0ef92c4c9689847cb392945095be3271.setIcon(icon_e46e94b79055070c26e0a7ceec5875d2);
+            
+    
+            var marker_c77fcb1652469760a0fb373d0974b43d = L.marker(
+                [4.638, -74.068],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_a512834d3fa3acf7dac00a4cd1618bf2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f5fe37caf15b58107f5c3e1fb9364ac8 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_a03a0d8415630c04753bb199ca7752b1 = $(`<div id="html_a03a0d8415630c04753bb199ca7752b1" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Limpio Galerías</h3>                     <p><b>📍 Dirección:</b> Carrera 23 # 42-56</p>                     <p><b>📞 Teléfono:</b> 601 2115678</p>                     <p><b>🕒 Horario:</b> Todos los días: 9:00 - 21:00</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_f5fe37caf15b58107f5c3e1fb9364ac8.setContent(html_a03a0d8415630c04753bb199ca7752b1);
+            
+        
+
+        marker_c77fcb1652469760a0fb373d0974b43d.bindPopup(popup_f5fe37caf15b58107f5c3e1fb9364ac8)
+        ;
+
+        
+    
+    
+            marker_c77fcb1652469760a0fb373d0974b43d.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Limpio Galerías
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c77fcb1652469760a0fb373d0974b43d.setIcon(icon_a512834d3fa3acf7dac00a4cd1618bf2);
+            
+    
+            var marker_e1f99e4c5f75d6e47481ec0b5eb9c9f1 = L.marker(
+                [4.596, -74.072],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_20f12fa7b07fce419f3753d19a0fe245 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d767db883ce74477dc3879eb1b1d362c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_17a95fc63e6c6dda46b3917d67e94804 = $(`<div id="html_17a95fc63e6c6dda46b3917d67e94804" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Limpio La Candelaria</h3>                     <p><b>📍 Dirección:</b> Carrera 5 # 12-68</p>                     <p><b>📞 Teléfono:</b> 601 2825678</p>                     <p><b>🕒 Horario:</b> Miércoles a Domingo: 9:00 - 16:00</p>                     <p><b>♻️ Materiales aceptados (7):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 2 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_d767db883ce74477dc3879eb1b1d362c.setContent(html_17a95fc63e6c6dda46b3917d67e94804);
+            
+        
+
+        marker_e1f99e4c5f75d6e47481ec0b5eb9c9f1.bindPopup(popup_d767db883ce74477dc3879eb1b1d362c)
+        ;
+
+        
+    
+    
+            marker_e1f99e4c5f75d6e47481ec0b5eb9c9f1.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Limpio La Candelaria
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e1f99e4c5f75d6e47481ec0b5eb9c9f1.setIcon(icon_20f12fa7b07fce419f3753d19a0fe245);
+            
+    
+            var marker_84a1a15f2ab7bc563803b05b843d6647 = L.marker(
+                [4.64, -74.148],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_f330b942801a6fbb120b664f4b656f74 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_76b59c66c7279131e83f4353bc146e95 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_8a90b0c1c2d27052724f9bb19788fae2 = $(`<div id="html_8a90b0c1c2d27052724f9bb19788fae2" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Limpio Metrovivienda</h3>                     <p><b>📍 Dirección:</b> Calle 38 Sur # 78-34</p>                     <p><b>📞 Teléfono:</b> 601 4603456</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 7:00 - 18:00</p>                     <p><b>♻️ Materiales aceptados (7):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 2 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_76b59c66c7279131e83f4353bc146e95.setContent(html_8a90b0c1c2d27052724f9bb19788fae2);
+            
+        
+
+        marker_84a1a15f2ab7bc563803b05b843d6647.bindPopup(popup_76b59c66c7279131e83f4353bc146e95)
+        ;
+
+        
+    
+    
+            marker_84a1a15f2ab7bc563803b05b843d6647.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Limpio Metrovivienda
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_84a1a15f2ab7bc563803b05b843d6647.setIcon(icon_f330b942801a6fbb120b664f4b656f74);
+            
+    
+            var marker_4c617d9c732ecfd9574a733786c352b2 = L.marker(
+                [4.628, -74.102],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_f227b1ff3a97dfc4b1f97473d94ae617 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_38884fb048cbbfac972914eed3e01c24 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_77e60cf8a194b657ba640765e694d0e6 = $(`<div id="html_77e60cf8a194b657ba640765e694d0e6" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Limpio Puente Aranda</h3>                     <p><b>📍 Dirección:</b> Carrera 40 # 17-23</p>                     <p><b>📞 Teléfono:</b> 601 3795678</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 7:00 - 18:00</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_38884fb048cbbfac972914eed3e01c24.setContent(html_77e60cf8a194b657ba640765e694d0e6);
+            
+        
+
+        marker_4c617d9c732ecfd9574a733786c352b2.bindPopup(popup_38884fb048cbbfac972914eed3e01c24)
+        ;
+
+        
+    
+    
+            marker_4c617d9c732ecfd9574a733786c352b2.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Limpio Puente Aranda
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4c617d9c732ecfd9574a733786c352b2.setIcon(icon_f227b1ff3a97dfc4b1f97473d94ae617);
+            
+    
+            var marker_d606dd095963be1ee7f1fb8d6a4adf3a = L.marker(
+                [4.738, -74.068],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_8d46c83fba269b507acbf30f89f69e3c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd950929b6c7f7f119dafec5dcb8be18 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_ba838ce1b180741d0ffb46ffeddccf54 = $(`<div id="html_ba838ce1b180741d0ffb46ffeddccf54" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Limpio Suba Rincón</h3>                     <p><b>📍 Dirección:</b> Carrera 91 # 128-45</p>                     <p><b>📞 Teléfono:</b> 601 6845678</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 7:00 - 19:00</p>                     <p><b>♻️ Materiales aceptados (7):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 2 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_bd950929b6c7f7f119dafec5dcb8be18.setContent(html_ba838ce1b180741d0ffb46ffeddccf54);
+            
+        
+
+        marker_d606dd095963be1ee7f1fb8d6a4adf3a.bindPopup(popup_bd950929b6c7f7f119dafec5dcb8be18)
+        ;
+
+        
+    
+    
+            marker_d606dd095963be1ee7f1fb8d6a4adf3a.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Limpio Suba Rincón
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d606dd095963be1ee7f1fb8d6a4adf3a.setIcon(icon_8d46c83fba269b507acbf30f89f69e3c);
+            
+    
+            var marker_c1151e86d34aa6f114500d2deae76e4f = L.marker(
+                [4.572, -74.142],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_9707386d4549ffe6ee7267643370fdf4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9c0a07137a386fc5a7d902fb32fa1827 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_0a25d2beb76a9a221768f7fdd5916d99 = $(`<div id="html_0a25d2beb76a9a221768f7fdd5916d99" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Limpio Tunjuelito</h3>                     <p><b>📍 Dirección:</b> Carrera 27 # 49-12 Sur</p>                     <p><b>📞 Teléfono:</b> 601 7695678</p>                     <p><b>🕒 Horario:</b> Martes a Domingo: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_9c0a07137a386fc5a7d902fb32fa1827.setContent(html_0a25d2beb76a9a221768f7fdd5916d99);
+            
+        
+
+        marker_c1151e86d34aa6f114500d2deae76e4f.bindPopup(popup_9c0a07137a386fc5a7d902fb32fa1827)
+        ;
+
+        
+    
+    
+            marker_c1151e86d34aa6f114500d2deae76e4f.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Limpio Tunjuelito
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c1151e86d34aa6f114500d2deae76e4f.setIcon(icon_9707386d4549ffe6ee7267643370fdf4);
+            
+    
+            var marker_613d9184e59a12730dfbb1041d03fbb2 = L.marker(
+                [4.575, -74.092],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_cba90b7169ffab2aad100c082f821eb4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_63c4cee6ef610f1b31f8a613017935b9 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_c4dd78e55a84c93cbaa20a8234ca1514 = $(`<div id="html_c4dd78e55a84c93cbaa20a8234ca1514" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Verde 20 de Julio</h3>                     <p><b>📍 Dirección:</b> Diagonal 22 # 5-67</p>                     <p><b>📞 Teléfono:</b> 601 2055678</p>                     <p><b>🕒 Horario:</b> Martes a Domingo: 8:00 - 17:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_63c4cee6ef610f1b31f8a613017935b9.setContent(html_c4dd78e55a84c93cbaa20a8234ca1514);
+            
+        
+
+        marker_613d9184e59a12730dfbb1041d03fbb2.bindPopup(popup_63c4cee6ef610f1b31f8a613017935b9)
+        ;
+
+        
+    
+    
+            marker_613d9184e59a12730dfbb1041d03fbb2.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Verde 20 de Julio
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_613d9184e59a12730dfbb1041d03fbb2.setIcon(icon_cba90b7169ffab2aad100c082f821eb4);
+            
+    
+            var marker_e49291f192ccd1d5b17de3fa408700f9 = L.marker(
+                [4.685, -74.138],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_cdd35895dc354b173bef275c55e47bcd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d0fcd101fd5ec63fa7c37cb7680eb87 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_b3b5e15a86e8325980b4c5f1443b30c9 = $(`<div id="html_b3b5e15a86e8325980b4c5f1443b30c9" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Verde Fontibón</h3>                     <p><b>📍 Dirección:</b> Carrera 108 # 22-34</p>                     <p><b>📞 Teléfono:</b> 601 4135678</p>                     <p><b>🕒 Horario:</b> Martes a Domingo: 9:00 - 18:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_3d0fcd101fd5ec63fa7c37cb7680eb87.setContent(html_b3b5e15a86e8325980b4c5f1443b30c9);
+            
+        
+
+        marker_e49291f192ccd1d5b17de3fa408700f9.bindPopup(popup_3d0fcd101fd5ec63fa7c37cb7680eb87)
+        ;
+
+        
+    
+    
+            marker_e49291f192ccd1d5b17de3fa408700f9.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Verde Fontibón
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e49291f192ccd1d5b17de3fa408700f9.setIcon(icon_cdd35895dc354b173bef275c55e47bcd);
+            
+    
+            var marker_b02ed258847c029729596fc2b723cb60 = L.marker(
+                [4.672, -74.082],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_bda1a5547c0753f1616c6a0fcc85de69 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2498c935c2342a006fe20ecb90b7f6e9 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_8c80dfe265f7ac24355d48d14d22730e = $(`<div id="html_8c80dfe265f7ac24355d48d14d22730e" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Verde Modelia</h3>                     <p><b>📍 Dirección:</b> Carrera 68 # 45-12</p>                     <p><b>📞 Teléfono:</b> 601 2365678</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 8:00 - 18:00</p>                     <p><b>♻️ Materiales aceptados (9):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 4 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_2498c935c2342a006fe20ecb90b7f6e9.setContent(html_8c80dfe265f7ac24355d48d14d22730e);
+            
+        
+
+        marker_b02ed258847c029729596fc2b723cb60.bindPopup(popup_2498c935c2342a006fe20ecb90b7f6e9)
+        ;
+
+        
+    
+    
+            marker_b02ed258847c029729596fc2b723cb60.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Verde Modelia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b02ed258847c029729596fc2b723cb60.setIcon(icon_bda1a5547c0753f1616c6a0fcc85de69);
+            
+    
+            var marker_1acd8fb697cd9ce990a35b70124ad345 = L.marker(
+                [4.582, -74.092],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_cb400fee1a7bb5ab97460a2c71bf0ec2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_674661359d52762351642c50be7a5e81 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d8b639e996b46f6e931ac9bd02a489bb = $(`<div id="html_d8b639e996b46f6e931ac9bd02a489bb" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Verde Restrepo</h3>                     <p><b>📍 Dirección:</b> Carrera 24 # 22-45 Sur</p>                     <p><b>📞 Teléfono:</b> 601 4775678</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 7:00 - 19:00</p>                     <p><b>♻️ Materiales aceptados (0):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                                              </div>                 </div>                 </div>`)[0];
+                popup_674661359d52762351642c50be7a5e81.setContent(html_d8b639e996b46f6e931ac9bd02a489bb);
+            
+        
+
+        marker_1acd8fb697cd9ce990a35b70124ad345.bindPopup(popup_674661359d52762351642c50be7a5e81)
+        ;
+
+        
+    
+    
+            marker_1acd8fb697cd9ce990a35b70124ad345.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Verde Restrepo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1acd8fb697cd9ce990a35b70124ad345.setIcon(icon_cb400fee1a7bb5ab97460a2c71bf0ec2);
+            
+    
+            var marker_c9ac4b8cbc5c105fcf6334f7bcf33d12 = L.marker(
+                [4.658, -74.058],
+                {
+}
+            ).addTo(marker_cluster_59ac698e586a9105caa36bc911db7c65);
+        
+    
+            var icon_ffbcb380961ad7ece8316e3f92bff8db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "recycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0da2e14431e142c2097f62552032e04c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_e199a671a02c43bfff988a173ba11e39 = $(`<div id="html_e199a671a02c43bfff988a173ba11e39" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px; font-family: Arial, sans-serif;">                     <h3 style="color: #2e7d32; margin-bottom: 10px;">Punto Verde Zona G</h3>                     <p><b>📍 Dirección:</b> Calle 70 # 5-23</p>                     <p><b>📞 Teléfono:</b> 601 3205678</p>                     <p><b>🕒 Horario:</b> Lunes a Sábado: 8:00 - 18:00</p>                     <p><b>♻️ Materiales aceptados (7):</b></p>                     <div style="max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 5px; border-radius: 3px;">                         • Periódicos<br>• Cartón corrugado<br>• Papel de oficina<br>• Tetra Pak<br>• PET<br>• ... y 2 más<br>                     </div>                 </div>                 </div>`)[0];
+                popup_0da2e14431e142c2097f62552032e04c.setContent(html_e199a671a02c43bfff988a173ba11e39);
+            
+        
+
+        marker_c9ac4b8cbc5c105fcf6334f7bcf33d12.bindPopup(popup_0da2e14431e142c2097f62552032e04c)
+        ;
+
+        
+    
+    
+            marker_c9ac4b8cbc5c105fcf6334f7bcf33d12.bindTooltip(
+                `<div>
+                     Click para ver detalles de Punto Verde Zona G
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c9ac4b8cbc5c105fcf6334f7bcf33d12.setIcon(icon_ffbcb380961ad7ece8316e3f92bff8db);
+            
+    
+            marker_cluster_59ac698e586a9105caa36bc911db7c65.addTo(map_c6886f625dfc1a2a378d7985244fb6e4);
+        
+</script>
+</html>
